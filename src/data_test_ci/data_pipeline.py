@@ -26,8 +26,8 @@ def enrich_user_data(user_ids: List[int]) -> List[Dict[str, Any]]:
 def send_data_to_destination(data: List[Dict[str, Any]]):
     insert_query = '''
     INSERT INTO app.enriched_data (
-        id,
-        name
+          id,
+          name
     )
     VALUES (
         %(id)s,
@@ -42,5 +42,5 @@ def run() -> None:
     send_data_to_destination(enrich_user_data(get_user_data()))
 
 
-if __name__ == '__main__':
+if __name__ ==    '__main__':
     run()
